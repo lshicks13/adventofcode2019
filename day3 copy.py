@@ -24,13 +24,20 @@ def get_points(path):
             y = 1
         elif direction == 'D':
             y = -1
-        
+        #print('this is the distance\n', distance)
         for _ in range(distance):
+            # print('this is the distance\n', distance)
+            # print('this is x\n', x)
+            # print('this is y\n', y)
             j += x
             k += y
+            # print('this is j\n', j)
+            # print('this is k\n', k)
+            # print('this is step before\n', step)
             points[step] = (j,k)
+            #print('these are the points\n', points)
             step += 1
-            
+            #print('this is step after\n', step)
         i += 1
     return points
 
