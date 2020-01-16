@@ -30,7 +30,6 @@ def get_points(path):
             k += y
             points[step] = (j,k)
             step += 1
-            
         i += 1
     return points
 
@@ -98,7 +97,7 @@ pts2 = get_points(path2)
 # print('Path 2 pts\n', pts2)
 # print('Path 1 pt\n', pts1[1])
 inter = get_intersections(pts1,pts2)
-print('this is intersecting pts\n', inter)
+#print('this is intersecting pts\n', inter)
 #print('Path1 step and shared pt\n', step1, spt1,'\nPath2 step and shared pt\n', step2, spt2)
 # pos = get_least_steps(step1, step2, spt1, spt2)
 # ans = get_md(pos)
