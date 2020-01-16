@@ -1,3 +1,5 @@
+
+
 #Read in the directions from the file and separate them into 2 paths
 def get_paths(txtfile):
     with open(txtfile) as f:
@@ -37,9 +39,10 @@ def get_intersections(pts1, pts2):
     for a in pts1:
         for b in pts2:
             if pts1[a] == pts2[b]:
-                sh_pts[a] = pts1[a]
+                sh_pts[a + b] = pts1[a]
+    min_key = min(sh_pts.keys()) 
     sh_pts = list(sh_pts.values())
-    return sh_pts
+    return sh_pts, min_key
 
 # Get the manhattan distance for each of the shared points
 # and return the shortest distance
@@ -56,9 +59,12 @@ def manhattan_distance(pts):
 def main():
     path1, path2 = get_paths('paths2.txt')
     pts1 = get_points(path1)
+    #print('this is path 1 pts\n', pts1)
     pts2 = get_points(path2)
-    inter = get_intersections(pts1,pts2)
-    print('Intersecting Points:\n', inter)
-    print('Manhattan Distance:\n', manhattan_distance(inter))
+    #print('this is path 2 pts\n', pts2)
+    shrd_pts, min_key = get_intersections(pts1,pts2)
+    print('Intersecting Points:\n', shrd_pts)
+    print('Manhattan Distance:\n', manhattan_distance(shrd_pts))
+    print('Fewest Combined Steps to Intersection:\n', min_key)
 
 main()
