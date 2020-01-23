@@ -67,21 +67,4 @@ def main():
     print('Manhattan Distance:\n', manhattan_distance(shrd_pts))
     print('Fewest Combined Steps to Intersection:\n', min_key)
 
-<<<<<<< HEAD
-path1, path2 = get_paths('paths.txt')
-pts1 = get_points(path1)
-pts2 = get_points(path2)
-# print('Path 1 pts\n', pts1)
-# print('Path 2 pts\n', pts2)
-# print('Path 1 pt\n', pts1[1])
-inter = get_intersections(pts1,pts2)
-#print('this is intersecting pts\n', inter)
-#print('Path1 step and shared pt\n', step1, spt1,'\nPath2 step and shared pt\n', step2, spt2)
-# pos = get_least_steps(step1, step2, spt1, spt2)
-# ans = get_md(pos)
-# print('this is the final md\n', ans)
-print(manhattan_distance(inter))
-#print(sum(abs(a-b) for a,b in zip(pts1,pts2)))
-=======
 main()
->>>>>>> 0a684b91fc42b27adb52f2a9975582eb3ad983ce
